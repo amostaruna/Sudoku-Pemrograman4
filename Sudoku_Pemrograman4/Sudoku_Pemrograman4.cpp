@@ -13,7 +13,6 @@ public:
     int areCoordinatesValid();
     void updateBoard();
     int isValidEntry();
-    int hasWon();
     void play();
 };
 
@@ -26,6 +25,7 @@ int main()
     sudoku.play();
     return 0;
 }
+
 void Sudoku::getMove()
 {
     string entry;
@@ -128,21 +128,7 @@ int Sudoku::isValidEntry()
             }
         }
     }
-
-    return 1;
-}
-
-int Sudoku::hasWon()
-{
-    //check if board is full
-    for (int i = 0; i < b.size; i++)
-    {
-        for (int j = 0; j < b.size; j++)
-        {
-            if (b.BoxCoordinate[i][j] == 0)
-                return 0;
-        }
-    }
+    //cout << "Your input has entered" << endl;
     return 1;
 }
 
@@ -152,7 +138,7 @@ void Sudoku::play()
 
     b.insertBoard();
 
-    while (!hasWon()) // while the board still has empty spaces
+    while (! b.isBoardFull()) // while the board still has empty spaces
     {
         system("cls");
         b.DisplayBox();

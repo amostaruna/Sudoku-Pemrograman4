@@ -18,4 +18,5 @@ protected:
 public:
     void insertBoard();
     void DisplayBox();
+    int isBoardFull();
 };

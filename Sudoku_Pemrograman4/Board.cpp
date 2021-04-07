@@ -56,4 +56,18 @@ void Board::DisplayBox()
         cout << endl;
     }
 }
+
+int Board::isBoardFull()
+{
+    //check if board is full
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (BoxCoordinate[i][j] == 0)
+                return 0;
+        }
+    }
+    return 1;
+}
 //BoxCoordinate[1][2];
