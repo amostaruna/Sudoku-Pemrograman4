@@ -1,7 +1,7 @@
-#include<iostream>
-using namespace std;
-class Command
-{
-	virtual void Execute();
-	virtual void Undo();
+#pragma once
+class Command{
+
+	public:
+		virtual void undo() {};
+		virtual void execute() {};
 };

@@ -17,5 +17,3 @@ public:
 	void SetPlayerTime(double);
 	double GetPlayerTime();
 };
-
-

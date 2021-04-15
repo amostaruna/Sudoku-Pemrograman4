@@ -71,3 +71,12 @@ int Board::isBoardFull()
     return 1;
 }
 //BoxCoordinate[1][2];
+
+void Board::setTempNumber(int temp)
+{
+    tempNumber = temp;
+}
+int Board::getTempNumber()
+{
+    return tempNumber;
+}
