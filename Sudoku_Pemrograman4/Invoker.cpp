@@ -1,25 +1,34 @@
 #include "Invoker.h"
 #include <iostream>
+#include
 
 using namespace std;
 
-Invoker::Invoker(){
+/*Invoker::Invoker() 
+{
 	cout << "Initialization is successfull" << endl;
 }
+*/
+Command* Invoker::GetCommand()
+{
+	return Commands.top();
+}
 
-void Invoker::pushCommand(Command* command) {
-	Commands.push(command);
-	cout << "Command is added" << endl;
+void Invoker::pushCommand(Command &command)
+{
+	Commands.push_back(&command);
 }
 
 void Invoker::popCommand() {
 
-	if (Commands.empty() == true) {
+	if (Commands.empty() == true) 
+	{
 		cout << "The stack is empty" << endl;
 	}
-	else {
-		cout << "command popped" << endl;
-		Commands.top()->execute();
-		Commands.pop();
-	}
+	// cout << "command popped" << endl;
+	// Commands.top()->execute();
+	Commands.pop_back();
+}
+bool Invoker::IsEmpty() {
+	return Commands.empty();
 }

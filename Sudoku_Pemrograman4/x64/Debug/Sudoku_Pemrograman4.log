@@ -1,6 +1,3 @@
-﻿  Sudoku_Pemrograman4.cpp
-D:\Tugas Kuliah\KELAS II\Pemrograman 4\Repo_Sudoku_Pemrograman4\Sudoku-Pemrograman4\Sudoku_Pemrograman4\Board.cpp(38,36): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-D:\Tugas Kuliah\KELAS II\Pemrograman 4\Repo_Sudoku_Pemrograman4\Sudoku-Pemrograman4\Sudoku_Pemrograman4\Board.cpp(48,40): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
-D:\Tugas Kuliah\KELAS II\Pemrograman 4\Repo_Sudoku_Pemrograman4\Sudoku-Pemrograman4\Sudoku_Pemrograman4\Sudoku_Pemrograman4.cpp(61,8): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
-D:\Tugas Kuliah\KELAS II\Pemrograman 4\Repo_Sudoku_Pemrograman4\Sudoku-Pemrograman4\Sudoku_Pemrograman4\Sudoku_Pemrograman4.cpp(61,64): warning C4554: '|': check operator precedence for possible error; use parentheses to clarify precedence
+﻿  Board.cpp
+D:\Tugas Kuliah\KELAS II\Pemrograman 4\Repo_Sudoku_Pemrograman4\Sudoku-Pemrograman4\Sudoku_Pemrograman4\Board.cpp(64,40): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
   Sudoku_Pemrograman4.vcxproj -> D:\Tugas Kuliah\KELAS II\Pemrograman 4\Repo_Sudoku_Pemrograman4\Sudoku-Pemrograman4\x64\Debug\Sudoku_Pemrograman4.exe

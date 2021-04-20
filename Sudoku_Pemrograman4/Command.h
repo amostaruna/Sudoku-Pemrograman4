@@ -1,7 +1,8 @@
 #pragma once
-class Command{
-
+class Command
+{
 	public:
-		virtual void undo() {};
-		virtual void execute() {};
+		virtual void undo() = 0;
+		virtual void execute() = 0;
+		virtual void redo() = 0;
 };

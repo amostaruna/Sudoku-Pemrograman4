@@ -1,5 +1,19 @@
 #include "Board.h"
 
+int Board::getBoxCoordinate(int row, int col)
+{
+    return BoxCoordinate[row][col];
+}
+
+void Board::SetBoxCoordinate(int row, int col, int number)
+{
+    BoxCoordinate[row][col] = number;
+}
+void Board::DeleteBoxCoordinate(int row, int col)
+{
+    BoxCoordinate[row][col] = ' ';
+}
+
 void Board::insertBoard()
 {
     cout << "Enter the size of the board: ";
@@ -19,23 +33,25 @@ void Board::insertBoard()
     // allocates and pushes entries into vector
     for (int i = 0; i < size; i++)
     {
+        vector<int> row;
         for (int j = 0; j < size; j++)
         {
             inputFile >> tmp;
-            BoxCoordinate[i][j] = tmp;
+            row.push_back(tmp);
         }
+        BoxCoordinate.push_back(row);
     }
-    copyBox[9][9] = BoxCoordinate[9][9];
+    copyBox = BoxCoordinate;
 }
 
 void Board::DisplayBox()
 {
     cout << "SUDOKU" << endl;
     cout << "======" << endl
-         << endl;
+        << endl;
     for (int i = 0; i < size; i++)
     {
-        if (((i % 3) == 0) & i != 0) // horizontal dividers
+        if (((i % 3) == 0) && i != 0) // horizontal dividers
         {
             for (int k = 0; k < 18; k++)
             {
@@ -70,6 +86,7 @@ int Board::isBoardFull()
     }
     return 1;
 }
+
 //BoxCoordinate[1][2];
 
 void Board::setTempNumber(int temp)

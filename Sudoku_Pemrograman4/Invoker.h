@@ -5,13 +5,15 @@
 #include <stack>
 
 using namespace std;
-class Invoker{
+class Invoker
+{
+private:
+	stack<Command*> Commands;
 
-	private:
-		stack <Command* > Commands;
-
-	public :
-		Invoker();
-		void pushCommand(Command* command);
-		void popCommand();
-};
+public:
+	Invoker();
+	Command* GetCommand();
+	void pushCommand(Command &command);
+	void popCommand();
+	bool IsEmpty();
+}; 

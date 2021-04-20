@@ -3,7 +3,8 @@ using namespace std;
 
 class Player
 {
-private:
+	friend class Sudoku;
+protected:
 	string playerName;
 	double playerTime;
 	int playerinput;

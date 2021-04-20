@@ -1,21 +1,19 @@
+#pragma once
 #include"Command.h"
-class FillCell:virtual Command
+#include"Board.h"
+class FillCell:public Command
 {
 private:
-	int Row;
+	int row;
 	int col;
-	int Pinput;
+	int playerInput;
+	Board *board;
 public:
-	void Execute();
-	void Undo();
+	FillCell() = default;
+	FillCell(Board &board, int row, int col, int playerInput);
+
+	void execute();
+	void undo();
+	void redo();
 
 };
-void FillCell::Execute()
-{
-	// b.BoxCoordinate[b.row - 1][b.col - 1] = p1.GetPlayerInput();
-}
-
-inline void FillCell::Undo()
-{
-	//kembali ke state sebelumnya
-}

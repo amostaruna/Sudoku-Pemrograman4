@@ -1,20 +1,13 @@
 #pragma once
 #include "Command.h"
-class FillBoard : public Command{
-
+#include "Board.h"
+class FillBoard : public Command
+{
 	private : 
-		int x, y, value;
+		int row, col, number;
 	public :
-		FillBoard();
-		FillBoard(int X, int Y, int Value);
-
-		void setX(int X);
-		void setY(int Y);
-		void setValue(int Value);
-
-		int getX();
-		int getY();
-		int getValue();
+		FillBoard() = default;
+		FillBoard(Board &board, int, int, int);
 
 		void execute();
 		void undo();

@@ -1,20 +1,17 @@
+#pragma once
 #include"Command.h"
-class DeleteCell :virtual Command
+#include"Board.h"
+class DeleteCell :public Command
 {
 private:
-	int Row;
+	int row;
 	int col;
-	int Pinput;
+	int playerInput;
+	Board *board;
 public:
-	void Execute();
-	void Undo();
+	DeleteCell() = default;
+	DeleteCell(Board &board, int row, int col, int playerInput);
+	void execute();
+	void undo();
+	void redo();
 };
-void DeleteCell::Execute()
-{
-	// menghapus cell
-}
-
-inline void DeleteCell::Undo()
-{
-	//kembali ke state sebelumnya
-}

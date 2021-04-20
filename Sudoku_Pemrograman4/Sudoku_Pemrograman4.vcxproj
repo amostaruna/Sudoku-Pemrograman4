@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,8 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="Command.cpp" />
+    <ClCompile Include="DeleteCell.cpp" />
     <ClCompile Include="FillCell.cpp" />
+    <ClCompile Include="Invoker.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Sudoku_Pemrograman4.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +152,7 @@
     <ClInclude Include="Command.h" />
     <ClInclude Include="DeleteCell.h" />
     <ClInclude Include="FillCell.h" />
+    <ClInclude Include="Invoker.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
