@@ -1,17 +1,11 @@
 #include "Invoker.h"
 #include <iostream>
-#include
 
 using namespace std;
 
-/*Invoker::Invoker() 
-{
-	cout << "Initialization is successfull" << endl;
-}
-*/
 Command* Invoker::GetCommand()
 {
-	return Commands.top();
+	return Commands.back();
 }
 
 void Invoker::pushCommand(Command &command)

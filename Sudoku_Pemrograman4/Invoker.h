@@ -2,16 +2,16 @@
 #include "Command.h"
 #include "DeleteCells.h"
 #include "FillBoard.h"
-#include <stack>
+#include <vector>
 
 using namespace std;
 class Invoker
 {
 private:
-	stack<Command*> Commands;
+	vector<Command*> Commands;
 
 public:
-	Invoker();
+	Invoker() = default;
 	Command* GetCommand();
 	void pushCommand(Command &command);
 	void popCommand();
